@@ -4,24 +4,50 @@
     <meta charset="utf-8">
     <title></title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>WHAT ARE YOU DRINKING?</h1>
-    <form>
-      <input type="text" placeholder="ladies' night"/>
-      <input type="submit" value="Get drink info">
-    </form>
-    <dl>
-      <dt>Name</dt>
-      <dd id="name"></dd>
+    <!-- main page -->
+    <div>
+      <button id="dropdown">HOW ARE YOU?</button>
+      <div class="menu">
+        <a href="#ladies">LADIES'NIGHT</a>
+        <a href="#non-alcoholic">NON ALCOHOLIC</a>
+        <a href="#sweet">I NEED A LITTLE SWEETNESS</a>
+      </div>
+    </div>
+      <div id="main-content">
 
-      <dt>Recipe</dt>
-      <dd id="recipe"></dd>
+      </div>
+      <div id="search">
+        <h1>WHAT ARE YOU DRINKING?</h1>
+          <input type="text" placeholder="ladies' night"/>
+          <!-- <input type="submit" value="Get drink info"> -->
+          <button id="main-btn"></button>
 
-      <dt>Ingredients</dt>
-      <dd id="ingredients"></dd>
-    </dl>
+        <div class= "wrapper">
+          <div id="name">
+          </div>
+          <div id="recipe">
+          </div>
+          <div id="ingredients">
+        </div>
+
+        <div id="calendar">
+        </div>
+        </div>
+      </div>
+    <!-- <div class= "drag-container">
+      <div id="drag1" class="ui-widget-content">
+        <p>Drag me to my target</p>
+      </div>
+
+      <div id="drop1" class="ui-widget-header">
+        <p>Drop here</p>
+      </div>
+    </div> -->
+
   </body>
 </html>
