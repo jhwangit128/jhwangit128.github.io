@@ -8,51 +8,40 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div class="container">
     <!-- main page -->
-    <div>
-      <button id="dropdown">I NEED A DRINK!</button>
-      <div class="menu">
-        <a href="#ladies">LADIES'NIGHT</a>
-        <a href="#non-alcoholic">NON ALCOHOLIC</a>
-        <a href="#sweet">I NEED A LITTLE SWEETNESS</a>
+      <div class="header">
+        <button id="dropdown">I NEED A DRINK!</button>
+        <div class="menu">
+          <a href="#ladies">LADIES'NIGHT</a>
+          <a href="#non-alcoholic">NON ALCOHOLIC</a>
+          <a href="#sweet">I NEED A LITTLE SWEETNESS</a>
+        </div>
       </div>
-    </div>
-      <!-- SEARCH BAR RESULTS -->
+        <!-- SEARCH BAR RESULTS -->
       <div id="search">
         <h1>SEARCH FOR YOUR DRINK</h1>
           <input type="text" placeholder="search by dinks' name or ingredients"/>
           <!-- <input type="submit" value="Get drink info"> -->
           <button id="main-btn"></button>
       </div>
-        <div class= "wrapper">
-          <div id="name">
-          </div>
-          <div id="recipe">
-          </div>
-          <div id="ingredients">
+      <div class= "wrapper">
+        <div id="name">
         </div>
-        <!-- INGREDIENT PAGE : ON RIGHT-->
-        <!-- <div class="ingredients">
-        </div> -->
-        <!-- images -->
+        <div id="recipe">
+        </div>
+        <div id="ingredients">
+        </div>
         <div class="imgs">
         </div>
       </div>
-      <!-- modal container -->
-      <div id="modal">
-        <!-- modal -->
-        <div id="modal-content">
-
-          <div id="modal-close">
-            <a id="close" class="modal-buttons">X</a>
-          </div>
-        </div>
-      </div>
+      <!-- image carousel -->
       <div class="imgCarousel">
 
       </div>
         <!-- DRINK TRACKER -->
-        <button id="trackerBtn">DRINK TRACKER</button>
+      <button id="tracker-btn">DRINK TRACKER</button>
+      <div id="tracker-modal">
         <div id="tracker">
           <h1>DRINK TRACKER</h1>
           <div class="month">
@@ -109,8 +98,12 @@
             <li>30</li>
             <li>31</li>
           </ul>
+          <div>
+            <a id="tracker-close" class="modal-buttons">X</a>
+          </div>
         </div>
-
+    </div>
+  </div>
         <!-- DRAG -->
 
   </body>

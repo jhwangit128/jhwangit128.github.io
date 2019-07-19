@@ -5,8 +5,6 @@
 $(() => {
   // hide them all!
   $('#search').hide()
-  // $('#recipe').hide()
-  // $('#ingredients').hide()
   $('#tracker').hide()
   $('.menu').hide()
 
@@ -16,55 +14,70 @@ $(() => {
     $('#search').show()
   })
 
-  // drink tracker btn
-  $('#trackerBtn').on('click', (event) => {
-    $('#tracker').slideToggle()
+  // ================
+  // DRINK TRACKER
+  // ================
+  const $openTrackerBtn = $('#tracker-btn')
+  const $tracker = $('#tracker')
+  const $closeBtn = $('#tracker-close')
+
+  // DRINK TRACKER BUTTON
+  $openTrackerBtn.on('click', (event) => {
+    $tracker.show()
   })
+
+  $closeBtn.on('click', () => {
+    $tracker.hide()
+  })
+
+
+
+
   // ================
   // IMAGE CAROUSEL
   // ================
-  let currentImgIndex = 0
-
-  let $currentImg = $('.carousel-images').children().eq(currentImgIndex)
-
-  let numOfImages = $('.carousel-images').children().length - 1
-
-  const $next = $('.next')
-  const $previous = $('.previous')
-
-  $next.on('click', () => {
-
-    $currentImg.hide()
-    // check if the currentImgIndex is less than the amount of images we have
-    if(currentImgIndex < numOfImages) {
-      // increment current image index
-      currentImgIndex++
-    } else { // if the currentImgIndex > the amount of images we have
-      // reset the currentImgIndex to 0, so we cycle back
-      currentImgIndex = 0
-    }
-    // change the currentImg
-    $currentImg = $('.carousel-images').children().eq(currentImgIndex)
-    // show the new currentImg
-    $currentImg.show()
-  })
-
-  // previous button
-  $previous.on('click', () => {
-    // hide the current image
-    $currentImg.hide()
-    // check if the currentImgIndex > 0
-    if (currentImgIndex > 0) {
-      // decrement the current image index
-      currentImgIndex--
-    } else { // if the currentImgIndex < 0, reset the currentImgIndex to the numOfImages
-      currentImgIndex = numOfImages
-    }
-    // change the currentImg
-    $currentImg = $('.carousel-images').children().eq(currentImgIndex)
-    // show the new currentImg
-    $currentImg.show()
-  })
+  // let currentImgIndex = 0
+  //
+  // let $currentImg = $('.carousel-images').children().eq(currentImgIndex)
+  //
+  // let numOfImages = $('.carousel-images').children().length - 1
+  //
+  // const $next = $('.next')
+  // const $previous = $('.previous')
+  //
+  // $next.on('click', () => {
+  //
+  //   $currentImg.hide()
+  //   // check if the currentImgIndex is less than the amount of images we have
+  //   if(currentImgIndex < numOfImages) {
+  //     // increment current image index
+  //     currentImgIndex++
+  //   } else { // if the currentImgIndex > the amount of images we have
+  //     // reset the currentImgIndex to 0, so we cycle back
+  //     currentImgIndex = 0
+  //   }
+  //   // change the currentImg
+  //   $currentImg = $('.carousel-images').children().eq(currentImgIndex)
+  //   // show the new currentImg
+  //   $currentImg.show()
+  // })
+  //
+  // // previous button
+  // $previous.on('click', () => {
+  //   // hide the current image
+  //   $currentImg.hide()
+  //   // check if the currentImgIndex > 0
+  //   if (currentImgIndex > 0) {
+  //     // decrement the current image index
+  //     currentImgIndex--
+  //   } else { // if the currentImgIndex < 0, reset the currentImgIndex to the numOfImages
+  //     currentImgIndex = numOfImages
+  //   }
+  //   // change the currentImg
+  //   $currentImg = $('.carousel-images').children().eq(currentImgIndex)
+  //   // show the new currentImg
+  //   $currentImg.show()
+  // })
   // ================
   // SEARCH BAR
   // ================
@@ -76,7 +89,6 @@ $(() => {
     $.ajax({
         url:'https://www.thecocktaildb.com/api/json/v1/1/search.php?s='+ userInput,
         type: "GET",
-        // data: 0[{strDrink:""}],
         dataType: 'json',
       }).then(
       (data) => {
@@ -88,11 +100,17 @@ $(() => {
         const $imgUl = $('<ul>')
         const $imgLi = $('<li>')
         const $ingreUl = $('<ul>')
-        // const $ingreLi = $('<li>')
+        const $ingreLi = $('<li>')
         for(let i = 0; i < $data.length; i++){
         const $name = $data[i].strDrink
         const $recipe = $data[i].strInstructions
-        const $ingredients = $data[i].strIngredient1 + '' + $data[i].strIngredient2 + '' + $data[i].strIngredient3 + '' + $data[i].strIngredient4
+        const $ingredient1 = $data[i].strIngredient1
+        const $ingredient2 = $data[i].strIngredient2
+        const $ingredient3 = $data[i].strIngredient3
+        const $ingredient4 = $data[i].strIngredient4
+        const $ingredient5 = $data[i].strIngredient5
+        const $ingredients = [$ingredient1, $ingredient2, $ingredient3, $ingredient4, $ingredient5]
+
         const $images = $data[i].strDrinkThumb
         // const $li = $('<li>').text($name)
         const $nameBtn = $('<button>').text($name).attr('id', 'name' + i).addClass('nameBtn')
@@ -110,24 +128,24 @@ $(() => {
         $imgUl.append($imgLi)
         $('.imgs').append($imgUl)
 
-        // $recipeLi.hide()
-        const $ingreLi = $('<li>').text($ingredients)
-        // .attr('id', 'ingredient' + i).addClass('ingreLink')
-        // $ingreLi.append($ingreLink)
+        // ingredients
+        const $ingreBtn = $('<button>').text($ingredients).attr('id', 'ingredients' + i).addClass('ingreBtn')
+        $ingreLi.append($ingreBtn)
         $ingreUl.append($ingreLi)
         $('#ingredients').append($ingreUl)
-        // console.log($images)
+
+        console.log($ingredients)
           //buttons for each drinks
           $nameBtn.on('click', () => {
             $recipeLi.toggle()
-            $ingreLi.toggle()
+            $ingreBtn.toggle()
             $imgThumb.toggle()
           })
         $recipeLi.css('display','none')
-        $ingreLi.css('display', 'none')
+        $ingreBtn.css('display', 'none')
         $imgThumb.css('display','none')
-        }
 
+      }
 
       },
       (error) => {
@@ -136,25 +154,3 @@ $(() => {
   })
 })
 })
-
-//drag drop but using jqueryUI So useless!!!
-// const dragAndDrop = () => {
-//   $( "#drag1" ).draggable();
-//   $( "#drop1" ).droppable({
-//     drop: function( event, ui ) {
-//       $( this )
-//         .addClass( "ui-state-highlight" )
-//         .find( "p" )
-//           .html( "Dropped!" );
-//     }
-//   });
-// }
-
-// let wordlist = [
-//   "LADIES' NIGHT",
-//   "NON ALCOHOLIC",
-//   "I NEED A LITTLE SWEETNESS",
-//   "GAME NIGHT",
-//   "I'M ON A DIET",
-//   "DATE NIGHT",
-// ]
