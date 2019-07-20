@@ -4,32 +4,73 @@
 // ================
 $(() => {
   // hide them all!
-  $('#search').hide()
-  $('#tracker').hide()
-  $('.menu').hide()
+  $('.wrapper').hide()
+
+
+
+  // =====================
+  // MAIN BUTTON CAROUSEL
+  // =====================
+  let currentBtnIndex = 0
+  let $currentBtn = $('.text-carousel').children().eq(currentBtnIndex)
+  let numOfBtn = $('.text-carousel').children().length - 1
+
+  const $next = $('.next')
+  const $previous = $('.previous')
+  //next btn
+  $next.on('click', () => {
+    $currentBtn.hide()
+
+    if(currentBtnIndex < numOfBtn) {
+      currentBtnIndex++
+    } else {
+      currentBtnIndex = 0
+    }
+    $currentBtn = $('.text-carousel').children().eq(currentBtnIndex)
+
+    $currentBtn.show()
+  })
+
+  //prev btn
+  $previous.on('click', () => {
+    $currentBtn.hide()
+
+    if(currentBtnIndex > 0) {
+      currentBtnIndex--
+    } else {
+      currnetBtnIndex = numOfBtn
+    }
+
+    $currentBtn = $('.text-carousel').children().eq(currentBtnIndex)
+
+    $currentBtn.show()
+
+  })
 
   // BUTTONS
-  $('#dropdown').on ('click', (event) => {
-    $('.menu').slideToggle();
-    $('#search').show()
+
+  $('#non-alcoholic').on('click', () => {
+    $('#header').hide()
   })
 
   // ================
   // DRINK TRACKER
   // ================
-  const $openTrackerBtn = $('#tracker-btn')
-  const $tracker = $('#tracker')
-  const $closeBtn = $('#tracker-close')
 
   // DRINK TRACKER BUTTON
-  $openTrackerBtn.on('click', (event) => {
-    $tracker.show()
+  $('#tracker-btn').on('click', (event) => {
+    $('#tracker-modal').show()
   })
 
-  $closeBtn.on('click', () => {
-    $tracker.hide()
+  $('#tracker-close').on('click', () => {
+    $('#tracker-modal').hide()
   })
+  // selecting calendar box
+  $trackerBox = $('.days').eq(0)
+  $trackerBox.on('click', () => {
+    $trackerBox.css("background", 'red')
 
+  })
 
 
 
@@ -81,9 +122,50 @@ $(() => {
   // ================
   // SEARCH BAR
   // ================
+  // $('#non-alcoholic').on('click', (event) => {
+  //   // event.preventDefault()
+  //   // $('#name').empty();
+  //   // const userInput = $('input[type="text"]').val()
+  //
+  //   $.ajax({
+  //       url:'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic',
+  //       type: "GET",
+  //       dataType: 'json',
+  //     }).then(
+  //     (data) => {
+  //
+  //       const $dataNonAlco = data.drinks
+  //       const $imgUlNa = $('<ul>')
+  //       const $imgLiNa= $('<li>')
+  //       for(let j = 0; j < $dataNonAlco.length; j++){
+  //       const $imagesNa = $dataNonAlco[j].strDrinkThumb
+  //       const $imgThumbNa = $('<img>').attr("src" , $imagesNa).attr('id', 'imgNa' + j).addClass('imageNa')
+  //       $imgLiNa.append($imgThumbNa)
+  //       $imgUlNa.append($imgLiNa)
+  //       $('.search-images').append($imgUlNa)
+  //       console.log($dataNonAlco)
+  //       //   $nameBtn.on('click', () => {
+  //       //     $recipeLi.toggle()
+  //       //     $ingreBtn.toggle()
+  //       //     $imgThumb.toggle()
+  //       //   })
+  //       // $recipeLi.css('display','none')
+  //       // $ingreBtn.css('display', 'none')
+  //       // $imgThumb.css('display','none')
+  //
+  //     }
+  //
+  //     },
+  //     (error) => {
+  //     console.log(error)
+  //
+  //   })
+  // })
+
   $('#main-btn').on('click', (event) => {
     event.preventDefault()
-    $('#name').empty();
+    $('#name').empty()
+    $('.header').hide()
     const userInput = $('input[type="text"]').val()
 
     $.ajax({
@@ -99,8 +181,7 @@ $(() => {
         const $recipeUl = $('<ul>')
         const $imgUl = $('<ul>')
         const $imgLi = $('<li>')
-        const $ingreUl = $('<ul>')
-        const $ingreLi = $('<li>')
+        const $ingredientUl = $('<ul>')
         for(let i = 0; i < $data.length; i++){
         const $name = $data[i].strDrink
         const $recipe = $data[i].strInstructions
@@ -110,6 +191,9 @@ $(() => {
         const $ingredient4 = $data[i].strIngredient4
         const $ingredient5 = $data[i].strIngredient5
         const $ingredients = [$ingredient1, $ingredient2, $ingredient3, $ingredient4, $ingredient5]
+
+
+        console.log($data)
 
         const $images = $data[i].strDrinkThumb
         // const $li = $('<li>').text($name)
@@ -129,20 +213,19 @@ $(() => {
         $('.imgs').append($imgUl)
 
         // ingredients
-        const $ingreBtn = $('<button>').text($ingredients).attr('id', 'ingredients' + i).addClass('ingreBtn')
-        $ingreLi.append($ingreBtn)
-        $ingreUl.append($ingreLi)
-        $('#ingredients').append($ingreUl)
+        const $ingredientLi = $('<li>').text($ingredients).attr('id', 'ingredients' + i).addClass('ingredients')
+        $ingredientUl.append($ingredientLi)
+        $('#ingredients').append($ingredientUl)
 
         console.log($ingredients)
           //buttons for each drinks
           $nameBtn.on('click', () => {
             $recipeLi.toggle()
-            $ingreBtn.toggle()
+            $ingredientLi.toggle()
             $imgThumb.toggle()
           })
         $recipeLi.css('display','none')
-        $ingreBtn.css('display', 'none')
+        $ingredientLi.css('display', 'none')
         $imgThumb.css('display','none')
 
       }
@@ -151,6 +234,6 @@ $(() => {
       (error) => {
       console.log(error)
 
+    })
   })
-})
 })

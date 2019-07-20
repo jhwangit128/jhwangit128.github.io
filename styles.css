@@ -1,6 +1,152 @@
-/* #drag1 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
-#drop1 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; } */
+/* GENERAL */
+body {
+  font-family: 'Karla', sans-serif;
+  background-color: #EBE9E9;
+  background-image: url("images/cocktail1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0 auto;
+  text-align: center;
+}
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
+ul {
+  list-style: none;
+}
+/* MAIN BUTTON CAROUSEL */
+.header {
+  width: 80%;
+  height: 200px;
+  background-color: rgba(57,62,65,0.9);
+  margin: 270px auto;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 90px;
+}
+
+.currentBtn {
+  width: 80%;
+  padding: 140px 0 0 0;
+  margin: 0;
+}
+
+.text-carousel {
+  width: 80%;
+  padding: 85px 0 0 0;
+  margin: 0;
+  box-sizing: border-box;
+  box-shadow: 2px 2px #62929E;
+}
+
+.text-carousel a {
+  font-family: 'Karla', sans-serif;
+  width: 100%;
+  font-size: 30px;
+  color: white;
+  display: none;
+  cursor: pointer;
+  background-color: #62929E;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.carousel-images img:first-of-type {
+  display: block;
+}
+
+.carousel-button {
+  align-self: center;
+  background: #62929E;
+  color: #888;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px #fa8d8e;
+}
+
+.carousel-button:hover {
+  cursor: pointer;
+  background: #D18585;
+  box-shadow: 1px 1px #f2cd99;
+  color: white;
+}
+
+/* SEARCH INPUT */
+#search {
+  margin: 20px 20px 0 800px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+input {
+  font-family: 'Karla', sans-serif;
+  font-size: 15px;
+  width: 240px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 2px;
+  padding-left: 10px;
+}
+
+#main-btn {
+  width: 25px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #D18585;
+}
+
+/* RESULT */
+.wrapper {
+  width: 80%;
+  height: 600px;
+  margin: 0 auto;
+  margin-top: 70px;
+  border-radius: 10px;
+  overflow: scroll;
+  background-color: rgba(255,255,255,0.9);
+}
+
+.wrapper div {
+  font-family: 'Karla', sans-serif;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.nameBtn {
+  height: 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: 'Karla', sans-serif;
+  background-color: #D18585;
+  font-size: 10px;
+  color: white;
+  box-shadow: 0;
+  margin: 0 10px 30px 0;
+}
+
+#recipe li {
+  line-height: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#ingredients li {
+  line-height: 1.5em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.image {
+  width: 70%;
+  border-radius: 8px;
+}
 /* Month header */
 .month {
   padding: 70px 25px;
@@ -61,14 +207,25 @@
   font-size:12px;
 }
 
-/* modal */
+/* TRACKER */
+#tracker-btn {
+  width: 150px;
+  height: 70px;
+  letter-spacing: 5px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 15px;
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 0;
+  margin-top: 70px;
 
-body {
+  background-color: #62929E;
+  color: #F3F8F2;
+  border-radius: 8px;
 
-	font-family: 'Arial';
 }
 
-#modal {
+#tracker-modal {
 	background-color: rgba(0,0,0,0.5);
 	position: fixed;
 	top: 0;
@@ -80,7 +237,7 @@ body {
 	display: none;
 }
 
-#modal-content {
+#tracker {
 	background-color: white;
 	height: 900px;
 	width: 900px;
@@ -91,8 +248,9 @@ body {
 	line-height: 120%;
 }
 
-#modal-footer {
+#close {
 	text-align: right;
+  top: 20px;
 }
 
 h1 {
@@ -100,8 +258,8 @@ h1 {
 }
 
 .modal-buttons {
-	padding: 14px 18px;
-	background-color: #677996;
+	padding: 20px 20px;
+	background-color: black;
 	border: none;
 	outline: none;
 	border-radius: 3px;

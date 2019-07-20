@@ -5,26 +5,20 @@
     <title></title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Fredoka+One|Karla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="container">
     <!-- main page -->
-      <div class="header">
-        <button id="dropdown">I NEED A DRINK!</button>
-        <div class="menu">
-          <a href="#ladies">LADIES'NIGHT</a>
-          <a href="#non-alcoholic">NON ALCOHOLIC</a>
-          <a href="#sweet">I NEED A LITTLE SWEETNESS</a>
-        </div>
-      </div>
-        <!-- SEARCH BAR RESULTS -->
+    <!-- SEARCH BAR RESULTS -->
       <div id="search">
-        <h1>SEARCH FOR YOUR DRINK</h1>
-          <input type="text" placeholder="search by dinks' name or ingredients"/>
-          <!-- <input type="submit" value="Get drink info"> -->
-          <button id="main-btn"></button>
+        <input type="text" placeholder="search by drinks' name"/>
+        <!-- <input type="submit" value="Get drink info"> -->
+        <button id="main-btn"></button>
       </div>
+      <!-- TRACKER BUTTON -->
+      <button id="tracker-btn">DRINK TRACKER</button>
       <div class= "wrapper">
         <div id="name">
         </div>
@@ -35,74 +29,91 @@
         <div class="imgs">
         </div>
       </div>
-      <!-- image carousel -->
-      <div class="imgCarousel">
-
-      </div>
-        <!-- DRINK TRACKER -->
-      <button id="tracker-btn">DRINK TRACKER</button>
-      <div id="tracker-modal">
-        <div id="tracker">
-          <h1>DRINK TRACKER</h1>
-          <div class="month">
-            <ul>
-              <li class="prev"></li>
-              <li class="next"></li>
-              <li>
-                July<br>
-                <span style="font-size:18px">2019</span>
-              </li>
-            </ul>
+        <div class="header">
+          <div class="carousel-button previous">
           </div>
-
-          <ul class="weekdays">
-            <li>Mo</li>
-            <li>Tu</li>
-            <li>We</li>
-            <li>Th</li>
-            <li>Fr</li>
-            <li>Sa</li>
-            <li>Su</li>
-          </ul>
-
-          <ul class="days">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li><span class="active">10</span></li>
-            <li>11</li>
-            <li>12</li>
-            <li>13</li>
-            <li>14</li>
-            <li>15</li>
-            <li>16</li>
-            <li>17</li>
-            <li>18</li>
-            <li>19</li>
-            <li>20</li>
-            <li>21</li>
-            <li>22</li>
-            <li>23</li>
-            <li>24</li>
-            <li>25</li>
-            <li>26</li>
-            <li>27</li>
-            <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
-          </ul>
-          <div>
-            <a id="tracker-close" class="modal-buttons">X</a>
+          <div class="text-carousel">
+            <a id="#ladies" class="menu-btn">LADIES' NIGHT</a>
+            <a id="#non-alcoholic" class="menu-btn">NON ALCOHOLIC</a>
+            <a id="#sweet" class="menu-btn">I NEED A LITTLE SWEETNESS</a>
+          </div>
+          <div class="carousel-button next">
           </div>
         </div>
-    </div>
+
+        <div class="search-images">
+
+        </div>
+
+
+      <!-- image carousel -->
+        <div class="imgCarousel">
+
+        </div>
+        <!-- DRINK TRACKER -->
+
+          <div id="tracker-modal">
+            <div id="tracker">
+              <h1>DRINK TRACKER</h1>
+              <div class="month">
+              <ul>
+                <li class="prev"></li>
+                <li class="next"></li>
+                <li>
+                  July<br>
+                  <span style="font-size:18px">2019</span>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="weekdays">
+              <li>Mo</li>
+              <li>Tu</li>
+              <li>We</li>
+              <li>Th</li>
+              <li>Fr</li>
+              <li>Sa</li>
+              <li>Su</li>
+            </ul>
+
+            <ul class="days">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+              <li>7</li>
+              <li>8</li>
+              <li>9</li>
+              <li>10</li>
+              <li>11</li>
+              <li>12</li>
+              <li>13</li>
+              <li>14</li>
+              <li>15</li>
+              <li>16</li>
+              <li>17</li>
+              <li>18</li>
+              <li>19</li>
+              <li>20</li>
+              <li>21</li>
+              <li>22</li>
+              <li>23</li>
+              <li>24</li>
+              <li>25</li>
+              <li>26</li>
+              <li>27</li>
+              <li>28</li>
+              <li>29</li>
+              <li>30</li>
+              <li>31</li>
+            </ul>
+            <div id='close'>
+              <a id="tracker-close" class="modal-buttons">X</a>
+            </div>
+          </div>
+      </div>
   </div>
         <!-- DRAG -->
 
