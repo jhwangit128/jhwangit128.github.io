@@ -4,8 +4,8 @@
 // ================
 $(() => {
   // hide them all!
+  // $('#search').hide()
   $('.wrapper').hide()
-
 
 
   // =====================
@@ -20,6 +20,7 @@ $(() => {
   //next btn
   $next.on('click', () => {
     $currentBtn.hide()
+
 
     if(currentBtnIndex < numOfBtn) {
       currentBtnIndex++
@@ -49,9 +50,9 @@ $(() => {
 
   // BUTTONS
 
-  $('#non-alcoholic').on('click', () => {
-    $('#header').hide()
-  })
+  // $('#non-alcoholic').on('click', () => {
+  //   $('#header').hide()
+  // })
 
   // ================
   // DRINK TRACKER
@@ -65,13 +66,21 @@ $(() => {
   $('#tracker-close').on('click', () => {
     $('#tracker-modal').hide()
   })
-  // selecting calendar box
-  $trackerBox = $('.days').eq(0)
-  $trackerBox.on('click', () => {
-    $trackerBox.css("background", 'red')
 
+  // BACKGROUND COLOR CHANGES WHEN CERTAIN NUM OF BUTTON CLICKED
+  let count = 0;
+  const $clickers = $('.clicker')
+  $clickers.on('click', () => {
+    $(event.currentTarget).addClass('clicked')
+      count = count +1
+        if(count === 5) {
+          alert("Having fun?")
+        } else if (count === 10){
+          alert("Slow down!")
+        } else if (count === 20){
+          alert("You need help!")
+        }
   })
-
 
 
   // ================
@@ -166,6 +175,7 @@ $(() => {
     event.preventDefault()
     $('#name').empty()
     $('.header').hide()
+    $('.wrapper').show()
     const userInput = $('input[type="text"]').val()
 
     $.ajax({

@@ -147,6 +147,16 @@ input {
   width: 70%;
   border-radius: 8px;
 }
+
+/* TRACKER */
+.click {
+  background-color: gray;
+  position: absolute;
+}
+
+.clicked {
+  background-color: red;
+}
 /* Month header */
 .month {
   padding: 70px 25px;
@@ -196,11 +206,13 @@ input {
 .days {
   padding: 10px 0;
   margin: 0;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .days li {
   list-style-type: none;
-  display: inline-block;
+  /* display: inline-block; */
   width: 13.6%;
   text-align: center;
   margin-bottom: 5px;
@@ -219,7 +231,7 @@ input {
   right: 0;
   margin-top: 70px;
 
-  background-color: #62929E;
+  background-color: #D18585;
   color: #F3F8F2;
   border-radius: 8px;
 
