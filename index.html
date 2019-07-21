@@ -5,116 +5,115 @@
     <title></title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="app.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Fredoka+One|Karla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Fredoka+One|Karla|Open+Sans:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="container">
+    <div class="logo">
+      <h1>DRINK</h1>
+      <h2>RECIPE<br>DATABASE</h2>
+    </div>
     <!-- main page -->
     <!-- SEARCH BAR RESULTS -->
-      <div id="search">
-        <input type="text" placeholder="search by drinks' name"/>
-        <!-- <input type="submit" value="Get drink info"> -->
-        <button id="main-btn"></button>
-      </div>
+    <div id="search">
+      <input type="text" placeholder="search by drinks' name"/>
+      <!-- <input type="submit" value="Get drink info"> -->
+      <button id="main-btn"></button>
+    </div>
 
       <div class= "wrapper">
+        <div class="wrapper-close">X
+        </div>
         <div id="name">
         </div>
         <div id="recipe">
+          <p>RECIPE:</p>
         </div>
         <div id="ingredients">
+          <p>INGREDIENTS:</p>
         </div>
         <div class="imgs">
         </div>
       </div>
-        <div class="header">
-          <div class="carousel-button previous">
+
+    <!-- DRINK TRACKER -->
+    <!-- TRACKER BUTTON -->
+    <button id="tracker-btn">DRINK TRACKER</button>
+      <div id="tracker-modal">
+        <div id="tracker">
+          <h1>DRINK TRACKER</h1>
+          <div class="calendar-container">
+          <div class="month">
+            <ul>
+              <li class="prev"></li>
+              <li class="next"></li>
+              <li>July<br><br>2019</li>
+            </ul>
           </div>
-          <div class="text-carousel">
-            <a id="#ladies" class="menu-btn">LADIES' NIGHT</a>
-            <a id="#non-alcoholic" class="menu-btn">NON ALCOHOLIC</a>
-            <a id="#sweet" class="menu-btn">I NEED A LITTLE SWEETNESS</a>
+          <div class="days-container">
+            <ul class="weekdays">
+              <li>Mon</li>
+              <li>Tues</li>
+              <li>Wed</li>
+              <li>Thurs</li>
+              <li>Fri</li>
+              <li>Sat</li>
+              <li>Sun</li>
+            </ul>
+            <ul class="days">
+              <li class="clicker">1</li>
+              <li class="clicker">2</li>
+              <li class="clicker">3</li>
+              <li class="clicker">4</li>
+              <li class="clicker">5</li>
+              <li class="clicker">6</li>
+              <li class="clicker">7</li>
+              <li class="clicker">8</li>
+              <li class="clicker">9</li>
+              <li class="clicker">10</li>
+              <li class="clicker">11</li>
+              <li class="clicker">12</li>
+              <li class="clicker">13</li>
+              <li class="clicker">14</li>
+              <li class="clicker">15</li>
+              <li class="clicker">16</li>
+              <li class="clicker">17</li>
+              <li class="clicker">18</li>
+              <li class="clicker">19</li>
+              <li class="clicker">20</li>
+              <li class="clicker">21</li>
+              <li class="clicker">22</li>
+              <li class="clicker">23</li>
+              <li class="clicker">24</li>
+              <li class="clicker">25</li>
+              <li class="clicker">26</li>
+              <li class="clicker">27</li>
+              <li class="clicker">28</li>
+              <li class="clicker">29</li>
+              <li class="clicker">30</li>
+              <li class="clicker">31</li>
+            </ul>
           </div>
-          <div class="carousel-button next">
-          </div>
+        <div id='close'>
+          <a id="tracker-close" class="modal-buttons">X</a>
         </div>
-
-        <div class="search-images">
-
-        </div>
-
-
-      <!-- image carousel -->
-        <div class="imgCarousel">
-
-        </div>
-        <!-- DRINK TRACKER -->
-        <!-- TRACKER BUTTON -->
-        <button id="tracker-btn">DRINK TRACKER</button>
-          <div id="tracker-modal">
-            <div id="tracker">
-              <h1>DRINK TRACKER</h1>
-              <div class="calendar-container">
-              <div class="month">
-                <ul>
-                  <li class="prev"></li>
-                  <li class="next"></li>
-                  <li>July<br>2019</li>
-                </ul>
-              </div>
-              <div class="days-container">
-                <ul class="weekdays">
-                  <li>Mo</li>
-                  <li>Tu</li>
-                  <li>We</li>
-                  <li>Th</li>
-                  <li>Fr</li>
-                  <li>Sa</li>
-                  <li>Su</li>
-                </ul>
-                <ul class="days">
-                  <li class="clicker">1</li>
-                  <li class="clicker">2</li>
-                  <li class="clicker">3</li>
-                  <li class="clicker">4</li>
-                  <li class="clicker">5</li>
-                  <li class="clicker">6</li>
-                  <li class="clicker">7</li>
-                  <li class="clicker">8</li>
-                  <li class="clicker">9</li>
-                  <li class="clicker">10</li>
-                  <li class="clicker">11</li>
-                  <li class="clicker">12</li>
-                  <li class="clicker">13</li>
-                  <li class="clicker">14</li>
-                  <li class="clicker">15</li>
-                  <li class="clicker">16</li>
-                  <li class="clicker">17</li>
-                  <li class="clicker">18</li>
-                  <li class="clicker">19</li>
-                  <li class="clicker">20</li>
-                  <li class="clicker">21</li>
-                  <li class="clicker">22</li>
-                  <li class="clicker">23</li>
-                  <li class="clicker">24</li>
-                  <li class="clicker">25</li>
-                  <li class="clicker">26</li>
-                  <li class="clicker">27</li>
-                  <li class="clicker">28</li>
-                  <li class="clicker">29</li>
-                  <li class="clicker">30</li>
-                  <li class="clicker">31</li>
-                </ul>
-              </div>
-            <div id='close'>
-              <a id="tracker-close" class="modal-buttons">X</a>
-            </div>
-            </div>
-          </div>
       </div>
+    </div>
   </div>
-        <!-- DRAG -->
+  <!-- IMAGE CAROUSEL -->
+  <div class="carousel-container">
 
+    <div class= "contents">
+      <div class="img-btn previous"></div>
+      <div id="img-carousel"></div>
+      <div class="img-btn next"></div>
+    </div>
+  </div>
+
+
+
+
+  </div>
   </body>
 </html>
