@@ -66,11 +66,10 @@ header {
 
 /* === TRACKER BUTTON === */
 
-#tracker-btn {
-  margin-top: 34px;
-  margin-right: -40px;
-  width: 12%;
-  height: 70px;
+#tracker-btn, #save-it {
+  margin: 23px -90px 0 0;
+  width: 40%;
+  height: 80px;
   letter-spacing: 7px;
   padding-bottom: 4px;
   font-family: 'Fredoka One', cursive;
@@ -85,13 +84,24 @@ header {
   background-color: #FF3366;
 }
 
+/* === SAVED RECIPE BUTTON === */
+#save-it {
+  background-color: #f7f7ff;
+  color: #495867;
+  margin-right: 0;
+}
+
+#save-it:hover {
+  background-color: #FF3366;
+}
+
 /* =======================
    ======== MAIN =========
    ======================= */
 
 /* === TRACKER MODAL === */
 
-#tracker-modal {
+#tracker-modal, .save-drinks-modal {
 	background-color: rgba(0,0,0,0.5);
 	position: fixed;
 	top: 0;
@@ -107,7 +117,7 @@ header {
   padding-top: 50px;
   color: #BDD5EA;
 }
-#tracker {
+#tracker, .save-drink-name {
 	background-color: white;
 	height: 600px;
 	width: 900px;
@@ -119,7 +129,7 @@ header {
 
 /* === TRACKER CLOSE BUTTON === */
 
-#close {
+#close, #save-drinks-close {
   margin-right: 10px;
 	text-align: right;
   top: 20px;
@@ -375,7 +385,9 @@ input {
 @media only screen and (max-width: 600px) {
   /* For mobile phones: */
 
-
+  body{
+    background-image: url("images/cocktail2.jpg");
+  }
   .logo h1 {
     color: #495867;
     font-size: 25px;
@@ -388,11 +400,12 @@ input {
   #search {
     width: 80%;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 230px;
   }
 
   #main-btn {
-    background-color: #BDD5EA
+    background-color: #BDD5EA;
+    margin-left: 10px;
   }
 
   #main-btn:hover {
@@ -439,8 +452,75 @@ input {
   /* IMAGE CAROUSEL */
 
   .carousel-container {
-    width: 60%;
-    height: 20%;
+    margin-top: 220px;
+    width: 63%;
+    height: 30%;
   }
+
+  #img-carousel img:first-of-type {
+    display: block;
+    padding-left: 20px;
+  }
+
+  /* INPUT RESULTS */
+  .wrapper {
+    margin-top: 50px;
+    height: 30%;
+  	width: 80%;
+    margin: 0 auto;
+  	z-index: 1;
+    overflow: scroll;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 15px;
+  }
+
+
+  .wrapper-close {
+    font-size: 35px;
+    font-family: 'Fredoka One', cursive;
+    color: #577399;
+    cursor: pointer;
+    text-align: right;
+    float: right;
+    padding-right: 10px;
+    line-height: 0;
+  }
+
+  .wrapper div {
+    font-family: 'Karla', sans-serif;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  .nameBtn {
+    box-shadow: 0;
+    margin: 0 10px 10px 0;
+  }
+
+  .nameBtn:active {
+    outline: none;
+    border: 0;
+    background-color: #577399;
+  }
+
+  .nameBtn:hover {
+    cursor: pointer;
+    background: #495867;
+    color: white;
+  }
+
+  #recipe li {
+    line-height: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #ingredients li {
+    line-height: 1.5em;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
 
 }

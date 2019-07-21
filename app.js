@@ -64,7 +64,7 @@ $(() => {
         const $imagesRan = $random[j].strDrinkThumb
         const $imgThumbRan = $('<img>').attr("src" , $imagesRan).attr('id', 'imgRan' + j).addClass('imageRan')
         $('#img-carousel').append($imgThumbRan)
-        console.log($imgThumbRan)
+        //console.log($imgThumbRan)
 
         // ================
         // IMAGE CAROUSEL
@@ -74,7 +74,7 @@ $(() => {
         let $currentImg = $('#img-carousel').children('img').eq(0)
 
         let numOfImages = 50
-        // console.log($currentImg)
+        // //console.log($currentImg)
         const $next = $('.next')
         const $previous = $('.previous')
 
@@ -117,6 +117,7 @@ $(() => {
 
   $('#main-btn').on('click', (event) => {
     event.preventDefault()
+    $('#name-only').hide()
     $('#name').empty()
     $('.wrapper').show()
     $('.carousel-container').hide()
@@ -169,6 +170,17 @@ $(() => {
         $('#ingredients').append($ingredientUl)
 
           //buttons for each drinks
+          $('.save').on('click',() => {
+            $('#recipe:visible').clone().appendTo('.')
+            $('.save-drinks').children().not(':first').remove()
+            $('.save-drinks').hide()
+          })
+
+          $('#save-it').on('click', () => {
+            $('.save-drinks').toggle()
+
+          })
+
           $nameBtn.on('click', () => {
             $recipeLi.toggle()
             $ingredientLi.toggle()
