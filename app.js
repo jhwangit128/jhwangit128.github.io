@@ -29,6 +29,10 @@ $(() => {
     $('.carousel-container').show()
   })
 
+  $('#save-drinks-close').on('click', () => {
+    $('.save-drinks-modal').hide()
+  })
+
   // BACKGROUND COLOR CHANGES WHEN CERTAIN NUM OF BUTTON CLICKED
   let count = 0;
   const $clickers = $('.clicker')
@@ -64,7 +68,7 @@ $(() => {
         const $imagesRan = $random[j].strDrinkThumb
         const $imgThumbRan = $('<img>').attr("src" , $imagesRan).attr('id', 'imgRan' + j).addClass('imageRan')
         $('#img-carousel').append($imgThumbRan)
-        //console.log($imgThumbRan)
+        // console.log($imgThumbRan)
 
         // ================
         // IMAGE CAROUSEL
@@ -74,7 +78,7 @@ $(() => {
         let $currentImg = $('#img-carousel').children('img').eq(0)
 
         let numOfImages = 50
-        // //console.log($currentImg)
+        // console.log($currentImg)
         const $next = $('.next')
         const $previous = $('.previous')
 
@@ -171,13 +175,13 @@ $(() => {
 
           //buttons for each drinks
           $('.save').on('click',() => {
-            $('#recipe:visible').clone().appendTo('.')
-            $('.save-drinks').children().not(':first').remove()
-            $('.save-drinks').hide()
+            $('#recipe:visible').clone().appendTo('.saved-recipe')
+            $('.save-recipe').children().not(':first').remove()
+            $('.save-recipe').hide()
           })
 
           $('#save-it').on('click', () => {
-            $('.save-drinks').toggle()
+            $('.save-drinks-modal').show()
 
           })
 

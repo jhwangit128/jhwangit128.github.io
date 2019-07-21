@@ -99,9 +99,30 @@ header {
    ======== MAIN =========
    ======================= */
 
+/* === SAVE RECIPE MODAL === */
+.save-drinks-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+	display: none;
+}
+
+.saved-recipe {
+  width: 80%;
+  font-family: 'Karla', sans-serif;
+  color: black;
+  font-size: 22px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 /* === TRACKER MODAL === */
 
-#tracker-modal, .save-drinks-modal {
+#tracker-modal {
 	background-color: rgba(0,0,0,0.5);
 	position: fixed;
 	top: 0;
@@ -117,7 +138,7 @@ header {
   padding-top: 50px;
   color: #BDD5EA;
 }
-#tracker, .save-drink-name {
+#tracker, .save-drinks {
 	background-color: white;
 	height: 600px;
 	width: 900px;
