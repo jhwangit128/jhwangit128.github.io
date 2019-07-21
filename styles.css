@@ -1,89 +1,220 @@
+/* =========================
+   ======== GENERAL ========
+   ========================= */
 
 body {
   font-family: 'Karla', sans-serif;
   background-color: #EBE9E9;
-  background-image: url("images/cocktail1.jpg");
+  background-image: url("images/cocktail_img1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
   margin: 0 auto;
   margin-top: 0;
   text-align: center;
 }
+
 .container {
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-}
-
-.logo {
-  width: 9%;
-  background-color: #577399;
-  color: white;
-  text-align: left;
-  margin-top: 0;
-  padding: 0;
-
-
-}
-
-h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 700;
-  margin: 0;
-  padding: 18px 0 0 4px;
-  line-height: 0;
-}
-
-h2 {
-  font-family: 'Karla', sans-serif;
-  margin: 0;
-  padding: 0 0 0 4px;
 }
 
 ul {
   list-style: none;
 }
 
+/* =========================
+   ======== HEADER =========
+   ========================= */
 
-/* IMAGE CAROUSEL */
+header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  width: 10%;
+  color: #577399;
+  text-align: left;
+  margin: 0;
+  margin-right: 0;
+  padding: 0;
+  position: flex;
+  justify-content: flex-start;
+}
+
+.logo h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 0 0 9px;
+  line-height: 1;
+  color: #f7f7ff;
+}
+
+.logo h2 {
+  font-family: 'Karla', sans-serif;
+  margin: 0;
+  padding: 0 0 0 9px;
+  line-height: 0.8;
+}
+
+/* === TRACKER BUTTON === */
+
+#tracker-btn {
+  margin-top: 34px;
+  margin-right: -40px;
+  width: 12%;
+  height: 70px;
+  letter-spacing: 7px;
+  padding-bottom: 4px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 15px;
+  transform: rotate(-90deg);
+  background-color: #495867;
+  color: #F3F8F2;
+  border-radius: 8px;
+
+}
+#tracker-btn:hover {
+  background-color: #FF3366;
+}
+
+/* =======================
+   ======== MAIN =========
+   ======================= */
+
+/* === TRACKER MODAL === */
+
+#tracker-modal {
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	overflow: auto;
+	display: none;
+}
+
+#tracker h1 {
+  padding-top: 50px;
+  color: #BDD5EA;
+}
+#tracker {
+	background-color: white;
+	height: 600px;
+	width: 900px;
+	border-radius: 5px;
+	margin: 0 auto;
+  margin-top : 150px;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2)
+}
+
+/* === TRACKER CLOSE BUTTON === */
+
+#close {
+  margin-right: 10px;
+	text-align: right;
+  top: 20px;
+  font-size: 35px;
+  font-family: 'Fredoka One', cursive;
+  color: #577399;
+  cursor: pointer;
+}
+
+/* === MONTH & DAYS === */
+
+/* clicker */
+.calendar-container {
+  color: #495867;
+}
+
+.click {
+  background-color: gray;
+  position: absolute;
+}
+
+.clicked {
+  background-color: #BDD5EA;
+}
+
+.clicker {
+  cursor: pointer;
+}
+
+.month li {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.days-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.weekdays {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.days {
+  padding: 10px 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.days li {
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+/* === IMAGE CAROUSEL === */
+
 .carousel-container {
+  background-color: rgba(255,255,255,0.9);
   width: 50%;
-  margin: 50px auto;
-
+  height: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 5px;
+  padding-right: 2px;
 }
 
 .contents {
-  width: 100%;
-  height: 680px;
-  background-color: rgba(255,255,255,0.9);
-  margin: 20px auto;
   display: flex;
   justify-content: space-around;
-  border-radius: 90px;
-  padding-right: 15px;
-}
-
-#img-carousel {
-  width: 60%;
-  padding: 85px 0 0 0;
   margin: 0 auto;
-  box-sizing: border-box;
-
+  width: 80%;
+  height: 100%;
 }
 
 #img-carousel img {
-  width: 100%;
+  width: 85%;
   display: none;
   cursor: pointer;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 30px 0;
+  border-radius: 5px;
 }
 
 #img-carousel img:first-of-type {
   display: block;
-  width: 100%;
-  margin: 0 auto 50px auto;
+  padding-left: 40px;
 }
 
 .img-btn {
@@ -136,14 +267,12 @@ ul {
 /* SEARCH INPUT */
 #search {
   margin: 0 auto;
-  text-align: center;
-  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 37%;
   height: 20%;
-  position: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: flex-end;
-
+  margin-top: 60px;
 }
 
 input {
@@ -190,7 +319,7 @@ input {
   cursor: pointer;
   text-align: right;
   float: right;
-  padding-right: 8px;
+  padding-right: 10px;
   line-height: 0;
 }
 
@@ -207,7 +336,7 @@ input {
   text-transform: uppercase;
   font-family: 'Karla', sans-serif;
   background-color: #BDD5EA;
-  font-size: 10px;
+  font-size: 12px;
   color: white;
   box-shadow: 0;
   margin: 0 10px 30px 0;
@@ -241,131 +370,77 @@ input {
   border-radius: 8px;
 }
 
-/* TRACKER */
-.click {
-  background-color: gray;
-  position: absolute;
-}
 
-.clicked {
-  background-color: #FF3366;
-}
-
-.clicker {
-  cursor: pointer;
-}
-/* Month header */
-.month {
-  padding: 70px 25px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Month list */
-.month ul {
-  margin: 0;
-  padding: 0;
-}
-
-.month ul li {
-  color: black;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
+/* MEDIA QUERY */
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
 
 
-/* Weekdays (Mon-Sun) */
-.weekdays {
-  margin: 0;
-  padding: 10px 0;
-}
+  .logo h1 {
+    color: #495867;
+    font-size: 25px;
+  }
 
-.weekdays li {
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-}
+  .logo h2 {
+    font-size: 18px;
+  }
 
-/* Days (1-31) */
-.days {
-  padding: 10px 0;
-  margin: 0;
-  display: flex;
-  flex-flow: row wrap;
-}
+  #search {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
 
-.days li {
-  list-style-type: none;
-  /* display: inline-block; */
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-}
+  #main-btn {
+    background-color: #BDD5EA
+  }
 
-/* TRACKER */
-#tracker-btn {
-  width: 150px;
-  height: 70px;
-  letter-spacing: 5px;
-  font-family: 'Fredoka One', cursive;
-  font-size: 15px;
-  transform: rotate(-90deg);
-  position: fixed;
-  right: 0;
-  background-color: #495867;
-  color: #F3F8F2;
-  border-radius: 8px;
+  #main-btn:hover {
+    background-color: #F3F8F2;
+  }
 
-}
-#tracker-btn:hover {
-  background-color: #FF3366;
-}
+  #tracker-btn {
+   margin-top: 0px;
+   margin-right: 1px;
+   width: 18%;
+   font-size: 10px;
+   transform: rotate(360deg);
+   line-height: 16px;
+  }
 
-#tracker-modal {
-	background-color: rgba(0,0,0,0.5);
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
-	z-index: 1;
-	overflow: auto;
-	display: none;
-}
+  #tracker h1 {
+    padding-top: 10px;
+    padding-bottom: 0;
+    color: #BDD5EA;
+  }
 
-#tracker h1 {
-  padding-top: 50px;
-  color: #BDD5EA;
-}
-#tracker {
-	background-color: white;
-	height: 580px;
-	width: 900px;
-	border-radius: 2px;
-	margin: 153px auto;
-	box-shadow: 0 2px 2px rgba(0,0,0,0.2)
-	padding: 2%;
-	line-height: 120%;
-}
+  #tracker {
+  	background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+  }
 
-#close {
-	text-align: right;
-  top: 20px;
-}
+  #close {
+    margin-top: 10px;
+    line-height: 2;
+  }
 
-h1 {
-	padding-bottom: 15px;
-}
+  .calendar-container {
+    font-size: 20px;
+  }
 
-.modal-buttons {
-  margin: 0;
-	padding: 20px 20px;
-	background-color: black;
-	border: none;
-	outline: none;
-	border-radius: 3px;
-	color: white;
-	curor: pointer;
+  .weekdays {
+    font-size: 15px;
+    padding-left: 18px;
+  }
+
+  /* IMAGE CAROUSEL */
+
+  .carousel-container {
+    width: 60%;
+    height: 20%;
+  }
+
 }

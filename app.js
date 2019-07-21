@@ -37,10 +37,13 @@ $(() => {
       count = count +1
         if(count === 5) {
           alert("Having fun?")
+          $(event.currentTarget).css('background-color', '#FF3366')
         } else if (count === 10){
           alert("Slow down!")
+          $(event.currentTarget).css('background-color', '#FF3366')
         } else if (count === 20){
           alert("You need help!")
+          $(event.currentTarget).css('background-color', '#FF3366')
         }
   })
 
