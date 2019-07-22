@@ -67,11 +67,11 @@ header {
 /* === TRACKER BUTTON === */
 
 #tracker-btn, #save-it {
-  margin: 23px -90px 0 0;
-  width: 40%;
-  height: 80px;
+  margin-top: 28px;
+  width: 64%;
+  height: 70px;
   letter-spacing: 7px;
-  padding-bottom: 4px;
+  padding-left: 10px;
   font-family: 'Fredoka One', cursive;
   font-size: 15px;
   transform: rotate(-90deg);
@@ -88,11 +88,19 @@ header {
 #save-it {
   background-color: #f7f7ff;
   color: #495867;
-  margin-right: 0;
+  margin-top: 15px;
 }
 
 #save-it:hover {
   background-color: #FF3366;
+}
+
+.button-wrap {
+  width: 15%;
+  height: 30%;
+  display: flex;
+  justify-content: flex-end;
+
 }
 
 /* =======================
@@ -424,9 +432,10 @@ input {
 
   body{
     background-image: url("images/cocktail2.jpg");
+    background-attachment: fixed;
   }
+
   .logo h1 {
-    color: #495867;
     font-size: 25px;
   }
 
@@ -441,7 +450,6 @@ input {
   }
 
   #main-btn {
-    background-color: #BDD5EA;
     margin-left: 10px;
   }
 
@@ -450,12 +458,24 @@ input {
   }
 
   #tracker-btn {
-   margin-top: 0px;
-   margin-right: 1px;
-   width: 18%;
+    margin-top: 0;
    font-size: 10px;
    transform: rotate(360deg);
-   line-height: 16px;
+   line-height: 13px;
+  }
+
+  .button-wrap {
+    margin-top: 0;
+    width: 32%;
+    height: 10%;
+
+  }
+
+  #save-it {
+    margin-top: 0;
+    font-size: 10px;
+    transform: rotate(360deg);
+    line-height: 13px;
   }
 
   #tracker h1 {
@@ -489,7 +509,8 @@ input {
   /* IMAGE CAROUSEL */
 
   .carousel-container {
-    margin-top: 220px;
+    margin: 0 auto;
+    margin-top: 180px;
     width: 63%;
     height: 30%;
   }
@@ -500,35 +521,12 @@ input {
   }
 
   /* INPUT RESULTS */
+
   .wrapper {
-    margin-top: 50px;
-    height: 30%;
-  	width: 80%;
-    margin: 0 auto;
-  	z-index: 1;
-    overflow: scroll;
-    background-color: rgba(255,255,255,0.9);
-    border-radius: 15px;
+    height: 85%;
+  	width: 97%;
   }
 
-
-  .wrapper-close {
-    font-size: 35px;
-    font-family: 'Fredoka One', cursive;
-    color: #577399;
-    cursor: pointer;
-    text-align: right;
-    float: right;
-    padding-right: 10px;
-    line-height: 0;
-  }
-
-  .wrapper div {
-    font-family: 'Karla', sans-serif;
-    width: 70%;
-    margin: 0 auto;
-    margin-top: 40px;
-  }
 
   .nameBtn {
     box-shadow: 0;
@@ -559,5 +557,18 @@ input {
     margin-bottom: 50px;
   }
 
+  .save-drinks-modal {
+  	width: 80%;
+    margin-left: 55px;
+  }
+
+  .save-drinks {
+    width: 100%;
+  }
+
+  .saved-recipe {
+    width: 100%;
+    font-size: 20px;
+  }
 
 }

@@ -10,7 +10,7 @@ $(() => {
 
   // BUTTON
  $('.wrapper-close').on('click', () => {
-   $('.wrapper').hide()
+   $('.search-result-modal').hide()
    $('.carousel-container').show()
  })
 
@@ -51,12 +51,10 @@ $(() => {
         }
   })
 
-  // ======================
-  // IMAGE CAROUSEL RESULTS
-  // ======================
-  // $('#non-alcoholic').on('click', () => {
-  //   $('.carousel-container').show()
-  // })
+  // ================
+  // IMAGE CAROUSEL
+  // ================
+
     $.ajax({
         url:'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic'
 
@@ -115,8 +113,10 @@ $(() => {
       console.log(error)
 
     })
-  // })
 
+  // ====================
+  // ====== SEARCH ======
+  // ====================
 
 
   $('#main-btn').on('click', (event) => {
@@ -160,7 +160,7 @@ $(() => {
         $ul.append($li)
         $('#name').append($ul)
         // recipe content
-        const $recipeLi = $('<li>').text($recipe)
+        const $recipeLi = $('<li>').text("RECIPE:   " + $recipe)
         $recipeUl.append($recipeLi)
         $('#recipe').append($recipeUl)
         // images
@@ -170,7 +170,7 @@ $(() => {
         $('.imgs').append($imgUl)
 
         // ingredients
-        const $ingredientLi = $('<li>').text($ingredients).attr('id', 'ingredients' + i).addClass('ingredients')
+        const $ingredientLi = $('<li>').text("INGREDIENTS:   " + $ingredients).attr('id', 'ingredients' + i).addClass('ingredients')
         $ingredientUl.append($ingredientLi)
         $('#ingredients').append($ingredientUl)
 
@@ -187,9 +187,9 @@ $(() => {
           })
 
           $nameBtn.on('click', () => {
-            $recipeLi.toggle()
-            $ingredientLi.toggle()
-            $imgThumb.toggle()
+            $recipeLi.slideToggle()
+            $ingredientLi.slideToggle()
+            $imgThumb.slideToggle()
           })
         $recipeLi.css('display','none')
         $ingredientLi.css('display', 'none')
