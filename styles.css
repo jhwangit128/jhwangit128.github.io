@@ -470,7 +470,7 @@ span {
   /* For mobile phones: */
 
   body {
-    background-image: url("images/cocktail2.jpg");
+    background-image: url("images/cocktail_img2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -479,7 +479,7 @@ span {
     -o-background-size: cover;
     background-size: cover;
     height:100%;
-    overflow: hidden;
+    width:100%;
   }
 
   .logo {
@@ -552,12 +552,6 @@ span {
     font-size: 45px;
   }
 
-  /* IMAGE CAROUSEL */
-  /* .carousel-container {
-    margin: 0 auto;
-    margin-top: 200px;
-  } */
-
   /* API DATA MODAL */
 
   .wrapper {
@@ -605,7 +599,7 @@ span {
 
   /* GENERAL */
   body {
-    background-image: url("images/cocktail2.jpg");
+    background-image: url("images/cocktail_img2.png");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -682,13 +676,14 @@ span {
   }
 
   /* CALENDAR */
-  .calendar-container {
-    font-size: 20px;
-  }
 
   .weekdays {
-    font-size: 15px;
+    font-size: 25px;
     padding-left: 18px;
+  }
+
+  .days {
+    font-size: 35px;
   }
 
   /* IMAGE CAROUSEL */
