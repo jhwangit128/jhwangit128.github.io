@@ -11,7 +11,6 @@ body {
   background-attachment: fixed;
   background-size: cover;
   margin: 0 auto;
-  margin-top: 0;
   text-align: center;
 }
 
@@ -35,6 +34,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: auto;
 }
 
 .logo {
@@ -67,19 +67,17 @@ header {
 /* === TRACKER BUTTON === */
 
 #tracker-btn, #save-it {
-  margin-top: 28px;
-  width: 64%;
-  height: 70px;
-  letter-spacing: 7px;
-  padding-left: 10px;
   font-family: 'Fredoka One', cursive;
-  font-size: 15px;
-  transform: rotate(-90deg);
+  font-size: 18px;
   background-color: #495867;
   color: #F3F8F2;
   border-radius: 8px;
-
 }
+
+#tracker-btn h5, #save-it h5 {
+  transform: rotate(-90deg);
+}
+
 #tracker-btn:hover {
   background-color: #FF3366;
 }
@@ -88,7 +86,6 @@ header {
 #save-it {
   background-color: #f7f7ff;
   color: #495867;
-  margin-top: 15px;
 }
 
 #save-it:hover {
@@ -96,8 +93,8 @@ header {
 }
 
 .button-wrap {
-  width: 15%;
-  height: 30%;
+  width: 5px;
+  height: 10%;
   display: flex;
   justify-content: flex-end;
 
@@ -119,7 +116,7 @@ header {
 	display: none;
 }
 
-.saved-recipe {
+.saved-recipe, .saved-name {
   width: 80%;
   font-family: 'Karla', sans-serif;
   color: black;
@@ -127,6 +124,7 @@ header {
   margin: 0 auto;
   text-align: center;
 }
+
 
 /* === TRACKER MODAL === */
 
@@ -432,7 +430,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 2rem;
-  padding: 14px 15px 25px 0;
+  padding: 11px 15px 25px 0;
   text-align: right;
 }
 
@@ -442,15 +440,25 @@ footer p {
   color: #f7f7ff;
 }
 
+span {
+  color: #BDD5EA;
+}
 
 
-/* MEDIA QUERY */
-@media only screen and (max-width: 600px) {
+/* ==============================
+   ======== MEDIA QUERY =========
+   ============================== */
+
+   @media only screen and (max-device-width: 480px) {
   /* For mobile phones: */
 
-  body{
+  body {
     background-image: url("images/cocktail2.jpg");
     background-attachment: fixed;
+  }
+
+  main {
+    margin-top: 220px;
   }
 
   .logo h1 {
@@ -462,9 +470,9 @@ footer p {
   }
 
   #search {
-    width: 80%;
+    width: 55%;
     margin: 0 auto;
-    margin-top: 230px;
+    margin-top: 480px;
   }
 
   #main-btn {
@@ -475,25 +483,9 @@ footer p {
     background-color: #F3F8F2;
   }
 
-  #tracker-btn {
-    margin-top: 0;
+  #tracker-btn h5, #save-it h5{
    font-size: 10px;
    transform: rotate(360deg);
-   line-height: 13px;
-  }
-
-  .button-wrap {
-    margin-top: 0;
-    width: 32%;
-    height: 10%;
-
-  }
-
-  #save-it {
-    margin-top: 0;
-    font-size: 10px;
-    transform: rotate(360deg);
-    line-height: 13px;
   }
 
   #tracker h1 {
@@ -528,7 +520,7 @@ footer p {
 
   .carousel-container {
     margin: 0 auto;
-    margin-top: 180px;
+    margin-top: 480px;
     width: 63%;
     height: 30%;
   }
@@ -589,4 +581,7 @@ footer p {
     font-size: 20px;
   }
 
+  .save {
+    height: 45px;
+  }
 }

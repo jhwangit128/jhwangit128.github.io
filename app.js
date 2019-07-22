@@ -183,8 +183,7 @@ $(() => {
           //buttons for each drinks
           $('.save').on('click',() => {
             $('#recipe:visible').clone().appendTo('.saved-recipe')
-            $('.save-recipe').children().not(':first').remove()
-            $('.save-recipe').hide()
+            $('#nameAlone:visible').clone().appendTo('.saved-name')
           })
 
           $('#save-it').on('click', () => {
