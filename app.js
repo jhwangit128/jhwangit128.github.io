@@ -139,12 +139,14 @@ $(() => {
         const $data = data.drinks
         const $ul = $('<ul>')
         const $li = $('<li>')
+        const $nameUl = $('<ul>')
         const $recipeUl = $('<ul>')
         const $imgUl = $('<ul>')
         const $imgLi = $('<li>')
         const $ingredientUl = $('<ul>')
         for(let i = 0; i < $data.length; i++){
         const $name = $data[i].strDrink
+        const $nameAlone = $data[i].strDrink
         const $recipe = $data[i].strInstructions
         const $ingredient1 = $data[i].strIngredient1
         const $ingredient2 = $data[i].strIngredient2
@@ -154,11 +156,15 @@ $(() => {
         const $ingredients = [$ingredient1, $ingredient2, $ingredient3, $ingredient4, $ingredient5]
         const $images = $data[i].strDrinkThumb
         // console.log($data)
+        // add name button
         const $nameBtn = $('<button>').text($name).attr('id', 'name' + i).addClass('nameBtn')
-        // const $liName = $li.attr('id','name' + i)
         $li.append($nameBtn)
         $ul.append($li)
         $('#name').append($ul)
+        // add h1 name
+        const $nameLi = $('<li>').text($nameAlone).css({'font-size' : '20px', 'font-weight' : 'bolder', 'font-family' : 'Fredoka One'})
+        $nameUl.append($nameLi)
+        $('#nameAlone').append($nameUl)
         // recipe content
         const $recipeLi = $('<li>').text("RECIPE:   " + $recipe)
         $recipeUl.append($recipeLi)
@@ -187,10 +193,12 @@ $(() => {
           })
 
           $nameBtn.on('click', () => {
+            $nameLi.slideToggle()
             $recipeLi.slideToggle()
             $ingredientLi.slideToggle()
             $imgThumb.slideToggle()
           })
+        $nameLi.css('display','none')
         $recipeLi.css('display','none')
         $ingredientLi.css('display', 'none')
         $imgThumb.css('display','none')
