@@ -146,8 +146,8 @@ header {
 }
 #tracker, .save-drinks, .wrapper {
 	background-color: white;
+  width: 900px;
 	height: 600px;
-	width: 900px;
 	border-radius: 5px;
 	margin: 0 auto;
   margin-top : 150px;
@@ -455,6 +455,9 @@ span {
   body {
     background-image: url("images/cocktail2.jpg");
     background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .logo {
@@ -513,7 +516,7 @@ span {
   	background-color: white;
     width: 80%;
     margin: 0 auto;
-    margin-top: 250px;
+    margin-top: 450px;
     text-align: center;
   }
 
