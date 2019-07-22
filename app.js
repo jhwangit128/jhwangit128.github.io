@@ -184,6 +184,10 @@ $(() => {
           $('.save').on('click',() => {
             $('#recipe:visible').clone().appendTo('.saved-recipe')
             $('#nameAlone:visible').clone().appendTo('.saved-name')
+            $('.saved-recipe').children().not(':first').remove()
+            $('.saved-name').children().not(':first').remove()
+            // $('.saved-recipe').hide()
+
           })
 
           $('#save-it').on('click', () => {
