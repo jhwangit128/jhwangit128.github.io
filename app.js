@@ -29,6 +29,10 @@ $(() => {
     $('.carousel-container').show()
   })
 
+  $('#save-it').on('click', () => {
+    $('.save-drinks-modal').show()
+  })
+
   $('#save-drinks-close').on('click', () => {
     $('.save-drinks-modal').hide()
   })
@@ -162,7 +166,7 @@ $(() => {
         $ul.append($li)
         $('#name').append($ul)
         // add h1 name
-        const $nameLi = $('<li>').text($nameAlone).css({'font-size' : '20px', 'font-weight' : 'bolder', 'font-family' : 'Fredoka One'})
+        const $nameLi = $('<li>').text($nameAlone).css({'font-size' : '30px', 'font-weight' : 'bolder', 'font-family' : 'Fredoka One'})
         $nameUl.append($nameLi)
         $('#nameAlone').append($nameUl)
         // recipe content

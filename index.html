@@ -19,42 +19,47 @@
         </div>
         <!-- saved recipe & drink tracker buttons -->
         <div class= "button-wrap">
+        <!-- saved recipe button -->
         <button id="save-it"><h5>SAVED RECIPE</h5></button>
-
-    <!-- TRACKER BUTTON -->
+        <!-- tracker button -->
         <button id="tracker-btn"><h5>DRINK TRACKER</h5></button>
         </div>
       </header>
+      <!-- main contents starts here -->
       <main>
+        <!-- SAVED RECIPE MODAL -->
         <div class ="save-drinks-modal">
           <div class="save-drinks">
+            <!-- saved recipe close button -->
             <div id="save-drinks-close">
               <a id="save-drinks-close-a" class="modal-buttons">X</a>
+            </div>
+            <!-- saved recipe contents -->
             <div class= "saved-contents-wrapper">
-              <div class="saved-name">
-
-              </div>
-
-            <div class ="saved-recipe">
-
-            </div>
-            </div>
+              <!-- saved name -->
+              <div class="saved-name"></div>
+              <!-- saved recipe -->
+              <div class ="saved-recipe"></div>
             </div>
           </div>
         </div>
-        <!-- DRINK TRACKER -->
+        <!-- DRINK TRACKER MODAL-->
         <div id="tracker-modal">
           <div id="tracker">
+            <!-- tracker close button -->
             <div id="close">
               <a id="tracker-close" class="modal-buttons">X</a>
             </div>
+            <!-- tracker calendar -->
             <h1>DRINK TRACKER</h1>
             <div class="calendar-container">
+              <!-- month -->
               <div class="month">
                 <ul>
-                  <li>July<br><br>2019</li>
+                  <li>July<br>2019</li>
                 </ul>
               </div>
+              <!-- days -->
               <div class="days-container">
                 <ul class="weekdays">
                   <li>Mon</li>
@@ -99,61 +104,55 @@
                   <li class="clicker">31</li>
                 </ul>
               </div>
-
-      </div>
-    </div>
-  </div>
-    <!-- SEARCH BAR RESULTS -->
-    <div id="search">
-      <input type="text" onfocus="this.value=''" placeholder="search by drinks' name or keyword"/>
-      <!-- <input type="submit" value="Get drink info"> -->
-      <button id="main-btn"></button>
-    </div>
-
-
-
-      <div class="search-result-modal">
-        <div class= "wrapper">
-          <div class ="btn-wrap">
-          <div class= "save">
-          <p>SAVE THIS RECIPE</p>
-          </div>
-          <div class="wrapper-close">X
-          </div>
-          </div>
-          <div id="name">
-          </div>
-          <div id="nameAlone">
-          </div>
-          <div id="recipe">
-            <p></p>
-          </div>
-          <div id="ingredients">
-            <p></p>
-          </div>
-          <div class="imgs">
+            </div>
           </div>
         </div>
-      </div>
-
-
-  <!-- IMAGE CAROUSEL -->
-  <div class="carousel-container">
-
-    <div class= "contents">
-      <div class="img-btn previous"></div>
-      <div id="img-carousel"></div>
-      <div class="img-btn next"></div>
+    <!-- FETCH DATA -->
+        <!-- user input -->
+        <div id="search">
+          <input type="text" onfocus="this.value=''" placeholder="search by drinks' name or keyword"/>
+          <!-- search button -->
+          <button id="main-btn"></button>
+        </div>
+        <!-- API DATA MODAL -->
+        <div class="search-result-modal">
+          <div class= "wrapper">
+            <div class ="btn-wrap">
+              <!-- recipe save button -->
+              <div class= "save">
+                <p>SAVE THIS RECIPE</p></div>
+              <!-- API data modal close button -->
+              <div class="wrapper-close">X</div>
+            </div>
+            <!-- API data contents -->
+            <!-- name button -->
+            <div id="name"></div>
+            <!-- name -->
+            <div id="nameAlone"></div>
+            <!-- recipe -->
+            <div id="recipe"></div>
+            <!-- ingredients -->
+            <div id="ingredients"></div>
+            <!-- images -->
+            <div class="imgs"></div>
+          </div>
+        </div>
+        <!-- IMAGE CAROUSEL -->
+        <div class="carousel-container">
+          <div class= "contents">
+            <!-- carousel previous button -->
+            <div class="img-btn previous"></div>
+            <!-- carousel image -->
+            <div id="img-carousel"></div>
+            <!-- carousel next button -->
+            <div class="img-btn next"></div>
+          </div>
+        </div>
+      </main>
+      <!-- FOOTER -->
+      <footer>
+        <p>&copy; 2019 JIHA HWANG&ensp;API:TheCocktailDB&ensp;<span>DRINK RESPONSIBLY</span></p>
+      </footer>
     </div>
-  </div>
-
-</main>
-<footer>
-<p>&copy; 2019 JIHA HWANG API:TheCocktailDB  <span>DRINK RESPONSIBLY</span></p>
-
-</footer>
-
-
-  </div>
   </body>
 </html>

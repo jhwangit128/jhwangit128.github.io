@@ -13,10 +13,10 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height:100%;
-  width:100%;
+  margin: 0 auto;
 }
 
+/* === ENTIRE PAGE CONTAINER === */
 .container {
   width: 100%;
   margin: 0 auto;
@@ -26,6 +26,7 @@ body {
 ul {
   list-style: none;
 }
+
 
 /* =========================
    ======== HEADER =========
@@ -45,8 +46,7 @@ header {
   color: #577399;
   text-align: left;
   margin: 0;
-  margin-right: 0;
-  padding: 0;
+  padding: 0 0 0 12px;
   position: flex;
   justify-content: flex-start;
 }
@@ -86,6 +86,7 @@ header {
 }
 
 /* === SAVED RECIPE BUTTON === */
+
 #save-it {
   background-color: #f7f7ff;
   color: #495867;
@@ -94,24 +95,21 @@ header {
 #save-it:hover {
   background-color: #FF3366;
 }
+/* === TRACKER & SAVED BUTTONS WRAPPER === */
 
 .button-wrap {
   width: 5px;
   height: 10%;
   display: flex;
   justify-content: flex-end;
-
 }
+
 
 /* =======================
    ======== MAIN =========
    ======================= */
-main {
-  width: 100%;
-  padding: 0;
-  margin: 0 auto;
-}
-/* === SAVE RECIPE MODAL === */
+
+/* === SAVED RECIPE MODAL === */
 
 .save-drinks-modal {
 	position: fixed;
@@ -124,6 +122,7 @@ main {
 	display: none;
 }
 
+/* saved recipe modal contents recipe & name */
 .saved-recipe, .saved-name {
   width: 80%;
   font-family: 'Karla', sans-serif;
@@ -146,12 +145,15 @@ main {
 	z-index: 1;
 	overflow: auto;
 	display: none;
+  text-align: center;
 }
 
 #tracker h1 {
-  padding-top: 50px;
+  padding-top: 30px;
   color: #BDD5EA;
 }
+
+/* modals' content containers */
 #tracker, .save-drinks, .wrapper {
 	background-color: white;
   width: 900px;
@@ -162,8 +164,7 @@ main {
 	box-shadow: 0 2px 2px rgba(0,0,0,0.2)
 }
 
-/* === TRACKER CLOSE BUTTON === */
-
+/* tracker close button */
 #close, #save-drinks-close, .wrapper-close {
   margin-right: 10px;
 	text-align: right;
@@ -174,24 +175,9 @@ main {
   cursor: pointer;
 }
 
-/* === MONTH & DAYS === */
-
-/* clicker */
+/* calendar month & days */
 .calendar-container {
   color: #495867;
-}
-
-.click {
-  background-color: gray;
-  position: absolute;
-}
-
-.clicked {
-  background-color: #BDD5EA;
-}
-
-.clicker {
-  cursor: pointer;
 }
 
 .month li {
@@ -229,39 +215,54 @@ main {
   font-size: 20px;
 }
 
+/* clicker */
+.click {
+  background-color: gray;
+  position: absolute;
+}
+
+.clicked {
+  background-color: #BDD5EA;
+}
+
+.clicker {
+  cursor: pointer;
+}
+
+
 /* === IMAGE CAROUSEL === */
 
+/* carousel container */
 .carousel-container {
   background-color: rgba(255,255,255,0.9);
-  width: 50%;
-  height: 70%;
+  width: 40%;
+  height: 30%;
   margin: 0 auto;
-  margin-top: 50px;
-  border-radius: 5px;
-  padding-right: 2px;
+  margin-top: 100px;
+  border-radius: 15px;
 }
 
 .contents {
   display: flex;
   justify-content: space-around;
+  width: 90%;
+  padding: 20px 0;
   margin: 0 auto;
-  width: 80%;
-  height: 100%;
 }
 
+/* carousel images */
 #img-carousel img {
-  width: 85%;
+  width: 100%;
   display: none;
   cursor: pointer;
-  padding: 30px 0;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 #img-carousel img:first-of-type {
   display: block;
-  padding-left: 40px;
 }
 
+/* carousel previous & next button */
 .img-btn {
   align-self: center;
   text-align: center;
@@ -271,45 +272,42 @@ main {
   cursor: pointer;
 }
 
-.previous {
+.previous, .next {
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right:20px solid #495867;
   border-radius: 5px;
-  padding-left: 10px;
 }
 
 .next {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
   border-left:20px solid #495867;
-  border-radius: 5px;
 }
 
-.previous:hover {
+.previous {
+  border-right:20px solid #495867;
+}
+
+.previous:hover, .next:hover {
   width: 0;
   height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right:20px solid #FF3366;
   border-radius: 5px;
 }
 
 .next:hover {
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
   border-left: 20px solid #FF3366;
-  border-radius: 5px;
+}
+
+.previous:hover {
+  border-right:20px solid #FF3366;
 }
 
 
-/* SEARCH INPUT */
+/* === FETCH DATA === */
+
+/* user input */
 #search {
   margin: 0 auto;
   display: flex;
@@ -330,6 +328,7 @@ input {
   padding-left: 10px;
 }
 
+/* search button */
 #main-btn {
   width: 45px;
   height: 45px;
@@ -343,7 +342,8 @@ input {
   color: white;
 }
 
-/* RESULT */
+/* API DATA MODAL */
+
 .search-result-modal {
   position: fixed;
 	top: 0;
@@ -353,6 +353,7 @@ input {
 	z-index: 1;
 	overflow: auto;
 	display: none;
+  margin: 0 auto;
 }
 
 .wrapper {
@@ -370,31 +371,31 @@ input {
   border-radius: 5px;
   text-transform: uppercase;
   font-family: 'Karla', sans-serif;
-  background-color: #BDD5EA;
+  background-color: #495867;
   font-size: 12px;
   color: white;
   box-shadow: 0;
   margin: 0 10px 30px 0;
 }
 
-.nameBtn:active {
-  outline: none;
-  border: 0;
-}
-
 .nameBtn:hover {
   cursor: pointer;
-  background: #495867;
-  color: white;
+  background: #BDD5EA;
+  color: black;
 }
 
+/* api data modal save button*/
 .save {
-  width: 15%;
+  width: 19%;
   background-color: #577399;
+  text-align: center;
+  padding-bottom: 15px;
+  margin-right: 20px;
+
 }
 
 .save p {
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .save:hover {
@@ -403,15 +404,18 @@ input {
   color: white;
 }
 
+/* api data save & close button wrapper */
 .btn-wrap {
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
 }
 
-#name, #recipe, #ingredients {
+/* api data contents */
+#name, #nameAlone, #recipe, #ingredients, .imgs{
   width: 70%;
   margin: 0 auto;
+  text-align: center;
 }
 
 #recipe li {
@@ -430,6 +434,11 @@ input {
   width: 70%;
   border-radius: 8px;
 }
+
+
+/* =========================
+   ======== FOOTER =========
+   ========================= */
 
 footer {
   background-color: #577399;
@@ -470,7 +479,7 @@ span {
     -o-background-size: cover;
     background-size: cover;
     height:100%;
-    width:100%;
+    overflow: hidden;
   }
 
   .logo {
@@ -494,10 +503,6 @@ span {
     margin-left: 10px;
   }
 
-  #main-btn:hover {
-    background-color: #F3F8F2;
-  }
-
   input {
     font-size: 35px;
     width: 500px;
@@ -511,7 +516,6 @@ span {
     width: 100px;
     height: 100px;
     border-radius: 120px;
-    background-color: #FF3366;
   }
 
   #tracker-btn h5, #save-it h5{
@@ -519,10 +523,10 @@ span {
    transform: rotate(360deg);
   }
 
+  /* TRACKER CALENDAR */
   #tracker h1 {
     padding-top: 10px;
     padding-bottom: 0;
-    color: #BDD5EA;
   }
 
   #tracker {
@@ -536,55 +540,36 @@ span {
   #close {
     margin-top: 10px;
     line-height: 2;
-  }
-
-  .calendar-container {
-    font-size: 20px;
+    font-size: 40px;
   }
 
   .weekdays {
-    font-size: 15px;
+    font-size: 35px;
     padding-left: 18px;
   }
 
+  .days {
+    font-size: 45px;
+  }
+
   /* IMAGE CAROUSEL */
-
-  .carousel-container {
+  /* .carousel-container {
     margin: 0 auto;
-    margin-top: 280px;
-    width: 70%;
-    height: 30%;
-  }
+    margin-top: 200px;
+  } */
 
-  #img-carousel img:first-of-type {
-    display: block;
-    padding-left: 20px;
-  }
-
-  /* INPUT RESULTS */
+  /* API DATA MODAL */
 
   .wrapper {
     margin-top: 250px;
     width: 80%;
     height: 70%;
+    margin: 0 auto;
   }
 
   .nameBtn {
     font-size: 25px;
-    box-shadow: 0;
     margin: 0 30px 30px 0;
-  }
-
-  .nameBtn:active {
-    outline: none;
-    border: 0;
-    background-color: #577399;
-  }
-
-  .nameBtn:hover {
-    cursor: pointer;
-    background: #495867;
-    color: white;
   }
 
   #recipe li {
@@ -618,157 +603,159 @@ span {
 @media only screen and (max-device-width: 770px) {
 /* For tablets: */
 
+  /* GENERAL */
   body {
-   background-image: url("images/cocktail2.jpg");
-   background-repeat: no-repeat;
-   background-position: center;
-   background-attachment: fixed;
-   webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
-   height:100%;
-   width:100%;
+    background-image: url("images/cocktail2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;
+    width:100%;
   }
 
+  /* HEADER */
+
+  /* LOGO */
   .logo {
-   width: 30%;
+    width: 30%;
   }
   .logo h1 {
-   font-size: 80px;
+    font-size: 80px;
   }
 
   .logo h2 {
-   font-size: 60px;
+    font-size: 60px;
   }
 
+  /* SEARCH BAR */
   #search {
-   width: 60%;
-   margin: 0 auto;
-   margin-top: 280px;
-  }
-
-  #main-btn {
-   margin-left: 10px;
-  }
-
-  #main-btn:hover {
-   background-color: #F3F8F2;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 280px;
   }
 
   input {
-   font-size: 25px;
-   width: 500px;
-   height: 100px;
-   border-radius: 20px;
-   margin-right: 2px;
-   padding-left: 10px;
+    font-size: 25px;
+    width: 500px;
+    height: 100px;
+    border-radius: 20px;
+    margin-right: 2px;
+    padding-left: 10px;
   }
 
+  /* SEARCH BAR BUTTON */
   #main-btn {
-   width: 100px;
-   height: 100px;
-   border-radius: 120px;
-   background-color: #FF3366;
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 120px;
+    background-color: #FF3366;
   }
 
+  /* TRACKER */
   #tracker-btn h5, #save-it h5{
-  font-size: 22px;
-  transform: rotate(360deg);
+    font-size: 22px;
+    transform: rotate(360deg);
   }
 
   #tracker h1 {
-   padding-top: 10px;
-   padding-bottom: 0;
-   color: #BDD5EA;
+    padding-top: 10px;
+    padding-bottom: 0;
+    color: #BDD5EA;
   }
 
   #tracker {
-   background-color: white;
-   width: 80%;
-   margin: 0 auto;
-   margin-top: 350px;
-   text-align: center;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 350px;
+    text-align: center;
   }
 
   #close {
-   margin-top: 10px;
-   line-height: 2;
+    margin-top: 10px;
+    line-height: 2;
   }
 
+  /* CALENDAR */
   .calendar-container {
-   font-size: 20px;
+    font-size: 20px;
   }
 
   .weekdays {
-   font-size: 15px;
-   padding-left: 18px;
+    font-size: 15px;
+    padding-left: 18px;
   }
 
   /* IMAGE CAROUSEL */
-
   .carousel-container {
-   margin: 0 auto;
-   margin-top: 500px;
-   width: 60%;
-   height: 30%;
+    margin: 0 auto;
+    margin-top: 500px;
+    width: 60%;
+    height: 30%;
   }
 
   #img-carousel img:first-of-type {
-   display: block;
-   padding-left: 20px;
+    display: block;
+    padding-left: 20px;
   }
 
-  /* INPUT RESULTS */
-
+  /* API DATA MODAL */
   .wrapper {
-   margin-top: 250px;
-   width: 80%;
-   height: 70%;
+    margin-top: 250px;
+    width: 80%;
+    height: 70%;
   }
 
   .nameBtn {
-   font-size: 25px;
-   box-shadow: 0;
-   margin: 0 30px 30px 0;
+    font-size: 25px;
+    box-shadow: 0;
+    margin: 0 30px 30px 0;
   }
 
   .nameBtn:active {
-   outline: none;
-   border: 0;
-   background-color: #577399;
+    outline: none;
+    border: 0;
+    background-color: #577399;
   }
 
   .nameBtn:hover {
-   cursor: pointer;
-   background: #495867;
-   color: white;
+    cursor: pointer;
+    background: #495867;
+    color: white;
+  }
+
+  /* RECIPE SAVE BUTTON */
+  .save {
+    height: 45px;
+    font-size: 25px;
   }
 
   #recipe li {
-   line-height: 2em;
-   text-align: center;
-   margin-bottom: 30px;
+    line-height: 2em;
+    text-align: center;
+    margin-bottom: 30px;
   }
 
   #ingredients li {
-   line-height: 1.5em;
-   text-align: center;
-   margin-bottom: 50px;
+    line-height: 1.5em;
+    text-align: center;
+    margin-bottom: 50px;
   }
 
+  /* SAVED RECIPE MODAL */
   .save-drinks {
-   width: 80%;
-   margin-top: 250px;
+    width: 80%;
+    margin-top: 250px;
   }
 
   .saved-recipe {
-   width: 100%;
-   font-size: 20px;
+    width: 100%;
+    font-size: 20px;
   }
 
-  .save {
-   height: 45px;
-   font-size: 25px;
-  }
 }
