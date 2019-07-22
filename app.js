@@ -123,6 +123,7 @@ $(() => {
     event.preventDefault()
     $('#name-only').hide()
     $('#name').empty()
+    $('.search-result-modal').show()
     $('.wrapper').show()
     $('.carousel-container').hide()
 
