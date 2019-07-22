@@ -601,3 +601,156 @@ span {
     font-size: 25px;
   }
 }
+
+@media only screen and (max-device-width: 770px) {
+/* For tablets: */
+
+  body {
+   background-image: url("images/cocktail2.jpg");
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+  }
+
+  .logo {
+   width: 30%;
+  }
+  .logo h1 {
+   font-size: 80px;
+  }
+
+  .logo h2 {
+   font-size: 60px;
+  }
+
+  #search {
+   width: 60%;
+   margin: 0 auto;
+   margin-top: 280px;
+  }
+
+  #main-btn {
+   margin-left: 10px;
+  }
+
+  #main-btn:hover {
+   background-color: #F3F8F2;
+  }
+
+  input {
+   font-size: 35px;
+   width: 500px;
+   height: 100px;
+   border-radius: 20px;
+   margin-right: 2px;
+   padding-left: 10px;
+  }
+
+  #main-btn {
+   width: 100px;
+   height: 100px;
+   border-radius: 120px;
+   background-color: #FF3366;
+  }
+
+  #tracker-btn h5, #save-it h5{
+  font-size: 22px;
+  transform: rotate(360deg);
+  }
+
+  #tracker h1 {
+   padding-top: 10px;
+   padding-bottom: 0;
+   color: #BDD5EA;
+  }
+
+  #tracker {
+   background-color: white;
+   width: 80%;
+   margin: 0 auto;
+   margin-top: 350px;
+   text-align: center;
+  }
+
+  #close {
+   margin-top: 10px;
+   line-height: 2;
+  }
+
+  .calendar-container {
+   font-size: 20px;
+  }
+
+  .weekdays {
+   font-size: 15px;
+   padding-left: 18px;
+  }
+
+  /* IMAGE CAROUSEL */
+
+  .carousel-container {
+   margin: 0 auto;
+   margin-top: 200px;
+   width: 60%;
+   height: 30%;
+  }
+
+  #img-carousel img:first-of-type {
+   display: block;
+   padding-left: 20px;
+  }
+
+  /* INPUT RESULTS */
+
+  .wrapper {
+   margin-top: 250px;
+   width: 80%;
+   height: 70%;
+  }
+
+  .nameBtn {
+   font-size: 25px;
+   box-shadow: 0;
+   margin: 0 30px 30px 0;
+  }
+
+  .nameBtn:active {
+   outline: none;
+   border: 0;
+   background-color: #577399;
+  }
+
+  .nameBtn:hover {
+   cursor: pointer;
+   background: #495867;
+   color: white;
+  }
+
+  #recipe li {
+   line-height: 2em;
+   text-align: center;
+   margin-bottom: 30px;
+  }
+
+  #ingredients li {
+   line-height: 1.5em;
+   text-align: center;
+   margin-bottom: 50px;
+  }
+
+  .save-drinks {
+   width: 80%;
+   margin-top: 250px;
+  }
+
+  .saved-recipe {
+   width: 100%;
+   font-size: 20px;
+  }
+
+  .save {
+   height: 45px;
+   font-size: 25px;
+  }
+}
