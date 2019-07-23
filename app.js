@@ -176,16 +176,16 @@ $(() => {
         const $images = $data[i].strDrinkThumb
         // console.log($data)
         // add name button to a div
-        const $nameBtn = $('<button>').text($name).attr('id', 'name' + i).addClass('nameBtn')
+        const $nameBtn = $('<button>').append($name).attr('id', 'name' + i).addClass('nameBtn')
         $li.append($nameBtn)
         $ul.append($li)
         $('#name').append($ul)
         // add name to a div
-        const $nameLi = $('<li>').text($nameAlone).css({'font-size' : '30px', 'font-weight' : 'bolder', 'font-family' : 'Fredoka One'})
+        const $nameLi = $('<li>').append($nameAlone).css({'font-size' : '30px', 'font-weight' : 'bolder', 'font-family' : 'Fredoka One'})
         $nameUl.append($nameLi)
         $('#nameAlone').append($nameUl)
         // add recipe to a div
-        const $recipeLi = $('<li>').text("RECIPE:   " + $recipe)
+        const $recipeLi = $('<li>').append("RECIPE:   " + $recipe)
         $recipeUl.append($recipeLi)
         $('#recipe').append($recipeUl)
         // add images to a div
@@ -194,7 +194,7 @@ $(() => {
         $imgUl.append($imgLi)
         $('.imgs').append($imgUl)
         // add ingredients to a div
-        const $ingredientLi = $('<li>').text("INGREDIENTS:   " + $ingredients).attr('id', 'ingredients' + i).addClass('ingredients')
+        const $ingredientLi = $('<li>').append("INGREDIENTS:   " + $ingredients).attr('id', 'ingredients' + i).addClass('ingredients')
         $ingredientUl.append($ingredientLi)
         $('#ingredients').append($ingredientUl)
 

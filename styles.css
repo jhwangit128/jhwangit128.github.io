@@ -472,6 +472,11 @@ span {
   /* GENERAL */
   body {
     background: url(images/cocktail_img2.png) no-repeat 50% 50px fixed;
+    background-position: center;
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 
   /* HEADER */
@@ -615,148 +620,153 @@ span {
     font-size: 25px;
   }
 
+  footer {
+    margin-bottom: -20px;
+  }
 }
 
 @media only screen and (max-device-width: 480px) {
 /* For mobile phones: */
 
-body {
- background-image: url("images/cocktail_img2.png");
- background-repeat: no-repeat;
- background-position: center;
- background-attachment: fixed;
- webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
- height:100%;
- width:100%;
-}
+  body {
+    /* this prevents background image from jumping up */
+    background: url(images/cocktail_img2.png) no-repeat 50% 50px fixed;
+    background-position: center;
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
-.logo {
- width: 30%;
-}
-.logo h1 {
- font-size: 80px;
-}
+  .logo {
+   width: 30%;
+  }
+  .logo h1 {
+   font-size: 80px;
+  }
 
-.logo h2 {
- font-size: 60px;
-}
+  .logo h2 {
+   font-size: 60px;
+  }
 
-#search {
- width: 60%;
- margin: 0 auto;
- margin-top: 480px;
-}
+  #search {
+   width: 60%;
+   margin: 0 auto;
+   margin-top: 480px;
+  }
 
-#main-btn {
- margin-left: 10px;
-}
+  #main-btn {
+   margin-left: 10px;
+  }
 
-input {
- font-size: 25px;
- width: 500px;
- height: 100px;
- border-radius: 20px;
- margin-right: 2px;
- padding-left: 10px;
-}
+  input {
+   font-size: 25px;
+   width: 500px;
+   height: 100px;
+   border-radius: 20px;
+   margin-right: 2px;
+   padding-left: 10px;
+  }
 
-#main-btn {
- width: 100px;
- height: 100px;
- border-radius: 120px;
-}
+  #main-btn {
+   width: 100px;
+   height: 100px;
+   border-radius: 120px;
+  }
 
-#tracker-btn h5, #save-it h5{
-font-size: 22px;
-transform: rotate(360deg);
-}
+  #tracker-btn h5, #save-it h5{
+  font-size: 22px;
+  transform: rotate(360deg);
+  }
 
-/* TRACKER CALENDAR */
-#tracker h1 {
- padding-top: 10px;
- padding-bottom: 0;
-}
+  /* TRACKER CALENDAR */
+  #tracker h1 {
+   padding-top: 10px;
+   padding-bottom: 0;
+  }
 
-#tracker {
- background-color: white;
- width: 80%;
- margin: 0 auto;
- margin-top: 450px;
- text-align: center;
-}
+  #tracker {
+   background-color: white;
+   width: 80%;
+   margin: 0 auto;
+   margin-top: 450px;
+   text-align: center;
+  }
 
-#close {
- margin-top: 10px;
- line-height: 2;
- font-size: 40px;
-}
+  #close {
+   margin-top: 10px;
+   line-height: 2;
+   font-size: 40px;
+  }
 
-.weekdays {
- font-size: 35px;
- padding-left: 18px;
-}
+  .weekdays {
+   font-size: 35px;
+   padding-left: 18px;
+  }
 
-.days {
- font-size: 45px;
-}
+  .days {
+   font-size: 45px;
+  }
 
-/* API DATA MODAL */
+  /* API DATA MODAL */
 
-.wrapper {
- width: 80%;
- height: 70%;
- margin: 0 auto;
- margin-top: 180px;
-}
+  .wrapper {
+   width: 80%;
+   height: 70%;
+   margin: 0 auto;
+   margin-top: 180px;
+  }
 
-.nameBtn {
- font-size: 30px;
- margin: 0 30px 30px 0;
-}
+  .nameBtn {
+   font-size: 30px;
+   margin: 0 30px 30px 0;
+  }
 
-#name li {
-  font-size: 45px;
-}
+  #name li {
+    font-size: 45px;
+  }
 
-#recipe li {
- line-height: 2em;
- text-align: center;
- margin-bottom: 30px;
- font-size: 35px;
-}
+  #recipe li {
+   line-height: 2em;
+   text-align: center;
+   margin-bottom: 30px;
+   font-size: 35px;
+  }
 
-#ingredients li {
- line-height: 1.5em;
- text-align: center;
- margin-bottom: 50px;
- font-size: 35px;
-}
+  #ingredients li {
+   line-height: 1.5em;
+   text-align: center;
+   margin-bottom: 50px;
+   font-size: 35px;
+  }
 
-.save-drinks {
- width: 80%;
- margin-top: 250px;
-}
+  .save-drinks {
+   width: 80%;
+   margin-top: 250px;
+  }
 
-.saved-recipe {
- width: 100%;
- font-size: 20px;
-}
+  .saved-recipe {
+   width: 100%;
+   font-size: 20px;
+  }
 
-/* RECIPE SAVE BUTTON */
-.save {
- height: 45px;
- font-size: 25px;
-}
+  /* RECIPE SAVE BUTTON */
+  .save {
+   height: 45px;
+   font-size: 25px;
+  }
 
-/* IMAGE CAROUSEL */
-.carousel-container {
- margin: 0 auto;
- margin-top: 250px;
- width: 60%;
- height: 30%;
-}
+  /* IMAGE CAROUSEL */
+  .carousel-container {
+   margin: 0 auto;
+   margin-top: 250px;
+   width: 60%;
+   height: 30%;
+  }
+
+  /* FOOTER */
+  footer {
+    margin-bottom: -20px;
+  }
 
 }
