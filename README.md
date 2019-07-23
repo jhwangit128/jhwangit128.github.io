@@ -71,10 +71,10 @@ Image Carousel
 Drink Tracker
       
         let count = 0;
-  const $clickers = $('.clicker')
-  $clickers.on('click', () => {
-    $(event.currentTarget).addClass('clicked')
-      count = count +1
+        const $clickers = $('.clicker')
+        $clickers.on('click', () => {
+        $(event.currentTarget).addClass('clicked')
+         count = count +1
         if(count === 5) {
           alert("Having fun?")
           $(event.currentTarget).css('background-color', '#FF3366')
