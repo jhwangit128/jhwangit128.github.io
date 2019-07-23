@@ -548,7 +548,6 @@ span {
   }
 
   /* CALENDAR */
-
   .weekdays {
     font-size: 25px;
     padding-left: 18px;
@@ -599,6 +598,7 @@ span {
     margin-right: 50px;
   }
 
+  /* API DATA MODAL CONTENTS */
   #recipe li {
     line-height: 2em;
     text-align: center;

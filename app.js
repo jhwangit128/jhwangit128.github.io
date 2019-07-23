@@ -93,23 +93,29 @@ $(() => {
         if(currentImgIndex < 50) {
           currentImgIndex++
         } else {
+          // if the current image has the index bigger than 50, then reset the index to 0, cycle back
           currentImgIndex = 0
         }
-
+        // changing the current image
         $currentImg = $('#img-carousel').children().eq(currentImgIndex)
+        // show it
         $currentImg.show()
       })
-
+      // previous button
       $previous.on('click', () => {
+        // current image is hidden
         $currentImg.hide()
-
+        // if the index of current image is bigger than the amount of images
         if (currentImgIndex > 0) {
+          // increment current image index
           currentImgIndex--
+          // if the index of current image is less than the amount of images, reset the index to 0 and cycle back
         } else {
           currentImgIndex = 50
         }
-
+        // change the current image
         $currentImg = $('#img-carousel').children().eq(currentImgIndex)
+        // show it
         $currentImg.show()
       })
     }
