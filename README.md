@@ -18,7 +18,7 @@ AJAX
 
 I wanted to add something that I've learned during this program as much as possible. From FOR LOOP to Ajax.
 
-I included image carousel as a complex UI
+I added an image carousel for users to look through the images of random drinks.
 
 # LINK TO MY LIVE SITE
 
@@ -26,4 +26,4 @@ http://jhwangit128.github.io
 
 # UNSOLVED PROBLEMS
 
-I want to develop this app so that user can have more option to choose from in the drink tracker section. Instead of number of days, I want the user to add how many consumption
+I want to develop this app so that user can have more option to choose from in the drink tracker section. Instead of number of days, users can add daily drink consumption (how many cups or bottles).
