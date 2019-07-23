@@ -24,4 +24,4 @@ http://jhwangit128.github.io
 # UNSOLVED PROBLEMS
 
 I want to develop this app so that user can have more option to choose from in the drink tracker section. Instead of number of days, users can add daily drink consumption (how many cups or bottles).
-I did a user testing with my roommate at the end and I realized that instead of using image carousel with buttons, it would be much easier for the users to just swipe them. 
+I did user testing with my roommate at the end and I realized that instead of using image carousel with buttons, it would be much easier for the users to just swipe them.(mobile version)
